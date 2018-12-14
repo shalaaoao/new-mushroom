@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('test', ['as' => 'test', 'uses' => 'TestController@test']);
+Route::get('test2', ['as' => 'test2', 'uses' => 'TestController@test2']);
 
 Route::group(['prefix' => 'user'], function(){
 

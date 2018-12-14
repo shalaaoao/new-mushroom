@@ -6,45 +6,31 @@ use App\Bll\LotteryBll;
 use App\Enum\LotteryEnum;
 use App\Model\LotteryPrize;
 use App\Model\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator;
+use SwooleTW\Http\Server\Facades\Server;
+use SwooleTW\Http\Table\Facades\SwooleTable;
 
 class TestController extends Controller
 {
     public function test()
     {
-        $raw_str = encrypt('Laravel学院');
-        $decrypted_str = decrypt($raw_str);
-        dd(['after_encryt' => $raw_str, 'after_decrypt' => $decrypted_str]);
+        $users = factory(User::class, 1)->make();
+        print_r($users);
 
-        die;
-        $end = microtime(true);
-        echo $end - LARAVEL_START;
+        echo str_random(5);
+    }
 
-        die;
-        $query = LotteryPrize::groupBy('user_id')->select();
-        die;
+    public function test2()
+    {
+//        DB::beginTransaction();
+        $a = User::lockForUpdate()->get();
 
-
-        $start = microtime(true);
-        $a = new LotteryController();
-
-        $i = 0;
-        while($i<1000) {
-            $a->getLotteryPrizeCalc();
-            $i++;
-        }
-
-        $end = microtime(true);
-
-
-        $a->samePrizeStore();
-
-        echo $end-$start;
-
-
+        var_dump($a->toArray());
+//        DB::commit();
     }
 }

@@ -107,16 +107,15 @@ class LotteryBll extends BaseBll
 
             //新增库存至redis
             Redis::set($prize_store_redis_name, $prize_info['prize_last_store']);
+
+            //报警
+            //
         }
 
         if (Redis::get($prize_store_redis_name) <= 0) {
 
             //奖品已售完 - 奖品设为默认
             return $prize_id = LotteryEnum::LOTTERY_DEFAULT_PRIZE;
-        } else {
-
-            //减少奖品库存！！
-            Redis::decr(LotteryEnum::LOTTERY_PRIZE_LAST_STORE . $prize_id);
         }
 
         //判断奖品是有净值否反复抽取 限制
@@ -132,5 +131,48 @@ class LotteryBll extends BaseBll
         }
 
         return $prize_id;
+    }
+
+    //sql层判断
+    public static function filterPrizeInDB($prize_id, $user_id)
+    {
+        //用户抽奖次数
+        $ct_user_lo = LotteryPrize::where(['user_id' => $user_id])->count();
+        if ($ct_user_lo >= LotteryEnum::USER_GET_NUM_LIMIT) {
+            return self::returnData(false, '抽奖次数超过10次');
+        }
+
+        //奖品信息
+        $prize_info = LotteryBll::getPrizeInfo($prize_id);
+
+        //奖品已抽取次数
+        $prize_get = LotteryPrize::where(['prize_id' => $prize_id])->count();
+        if ($prize_get >= $prize_info['prize_store']) {
+            return self::returnData(false, '库存不足');
+        }
+
+        //判断奖品是有净值否反复抽取 限制
+        if ($prize_info['is_repeat_get']) {
+
+            $has_get = LotteryPrize::where(['user_id' => $user_id, 'prize_id' => $prize_id])->exists();
+            if ($has_get) {
+                return self::returnData(false, '奖品不允许反复抽取');
+            }
+        }
+
+        return self::returnData(true);
+    }
+
+    //通过sql自动修复redis
+    public function fixRedisByDB()
+    {
+//        lockForUpdate
+
+        //总抽奖人数
+
+
+        //奖品库存
+
+        //用户抽奖情况
     }
 }

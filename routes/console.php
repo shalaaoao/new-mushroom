@@ -23,3 +23,9 @@ Artisan::command('lottery:api {function_name}', function ($function_name) {
         $obj->$function_name();
     }
 })->describe('抽奖方法');
+
+Artisan::command('test', function () {
+    $table=\SwooleTW\Http\Table\SwooleTable::get('aaa');
+    var_dump($table);
+
+});
