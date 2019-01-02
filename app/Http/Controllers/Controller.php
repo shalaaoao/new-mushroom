@@ -19,6 +19,8 @@ class Controller extends BaseController
     protected static $cookie = null;
     const ERROR_FILE_NAME = 'error';
 
+    public static $admin_id = null;
+
     /**
      * 返回接口错误信息
      * @param string $errno

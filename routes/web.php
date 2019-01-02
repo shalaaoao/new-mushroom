@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', ['as' => 'test', 'uses' => 'TestController@test']);
-Route::get('test2', ['as' => 'test2', 'uses' => 'TestController@test2']);
+    Route::any('test', ['as' => 'test', 'uses' => 'TestController@test']);
+    Route::any('test2', ['as' => 'test2', 'uses' => 'TestController@test2']);
 
 Route::group(['prefix' => 'user'], function(){
 
@@ -39,3 +39,5 @@ Route::group(['prefix' => 'user'], function(){
         Route::get('user_center', ['as' => 'user.user_center', 'uses' => 'UserController@userCenter']);
     });
 });
+
+Route::any('login', ['as' => 'login', 'uses' => 'IViewController@login']);

@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\CrossHttp;
+use App\Http\Middleware\FilterAdminToken;
 use App\Http\Middleware\UserLogin;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -36,11 +38,14 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            CrossHttp::class,
         ],
 
         'api' => [
             'throttle:60,1',
             'bindings',
+            CrossHttp::class,
+
         ],
     ];
 
@@ -60,5 +65,6 @@ class Kernel extends HttpKernel
         'guest'         => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle'      => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'user_login'    => UserLogin::class,
+        'admin_token'   => FilterAdminToken::class,
     ];
 }
