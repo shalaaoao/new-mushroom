@@ -13,7 +13,7 @@ class MakeLottery extends Command
      *
      * @var string
      */
-    protected $signature = 'lottery:api111';
+    protected $signature = 'lottery:apii';
 
     /**
      * The console command description.
@@ -40,7 +40,6 @@ class MakeLottery extends Command
     public function handle()
     {
 
-        echo $params = $this->argument();die;
         $obj = new LotteryController();
 
         $i = 0;

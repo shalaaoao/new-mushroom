@@ -13,8 +13,24 @@ class IViewController extends Controller
     {
         $pageSize = $request->get('pageSize', 15);
         $pageNum  = $request->get('pageNum', 1);
-        $count    = UserInfo::where([])->count();
-        $data     = UserInfo::where([])->forPage($pageNum, $pageSize)->orderBy('id', 'asc')->get()->toArray();
+        $name = $request->get('name', '');
+        $qanswer = $request->get('qanswer', '');
+
+        Log::warning($request->all());
+
+        $data     = UserInfo::where([]);
+
+        if ($name) {
+            $data->where('customerappellation', 'like', '%'.$name.'%');
+        }
+
+        if ($qanswer !== NULL) {
+            $data->where('qanswer', $qanswer);
+        }
+
+        $count = $data->count();
+
+        $data = $data->forPage($pageNum, $pageSize)->orderBy('id', 'asc')->get()->toArray();
 
         $res = [
             'count' => $count,
@@ -29,7 +45,10 @@ class IViewController extends Controller
     {
         Log::info($request->all());
 
-        return response()->json(['data' => 1]);
+        $url = $request->get('filelist')[0];
+        Log::warning(json_decode($url, true));
+
+        return response()->json(['status' => 500, 'data' => '密码错误']);
     }
 
     //登陆
@@ -39,7 +58,7 @@ class IViewController extends Controller
         $password = $request->get('password', '');
 
         //判断密码正确
-        $valid_pwd = 1;
+        $valid_pwd = 10;
         if (!$valid_pwd) {
             return response()->json(['status' => 500, 'data' => '密码错误']);
         }
@@ -72,5 +91,96 @@ class IViewController extends Controller
         ];
 
         return response()->json(['status' => 200, 'data' => $data]);
+    }
+
+    //获取message数量
+    public function messageCount()
+    {
+        return response()->json(['status' => 200, 'data'=> 99]);
+    }
+
+    //退出登录
+    public function loginOut(Request $request)
+    {
+        $token = $request->header('token');
+
+        //退出登录
+
+        return response()->json(['status' => 200, 'data'=> '']);
+    }
+
+    //城市列表
+    public function cityList(){
+        $data = [
+            ['value' => 0, 'label' => '上海'],
+            ['value' => 1, 'label' => '北京'],
+            ['value' => 2, 'label' => '广州'],
+            ['value' => 3, 'label' => '纽约'],
+            ['value' => 4, 'label' => '伦敦'],
+            ['value' => 5, 'label' => '东京'],
+        ];
+
+        return response()->json(['status' => 200, 'data'=> $data]);
+    }
+
+    //删除用户
+    public function delUser()
+    {
+        $id = request('id', 0);
+        if (!$id || !UserInfo::where('id', $id)->exists()) {
+            return response()->json(['status' => 500, 'data'=> '不存在的用户']);
+        }
+
+        UserInfo::where('id', $id)->delete();
+        return response()->json(['status' => 200, 'data'=> '']);
+    }
+
+    //编辑用户
+    public function editUser()
+    {
+        $name = request('name', '');
+        $qanswer = request('qanswer', '');
+        $phone = request('phone', '');
+        $id = request('id', 0);
+        if (!$id) {
+            return response()->json(['status' => 500, 'data'=> '不存在的用户']);
+        }
+
+        Log::warning(request()->all());
+        $user = UserInfo::find($id);
+        if (!$user) {
+            return response()->json(['status' => 500, 'data'=> '不存在的用户']);
+        }
+
+        if ($name) {
+            $user->customerappellation = $name;
+        }
+
+        if ($qanswer) {
+            $user->qanswer = $qanswer;
+        }
+
+        if ($phone) {
+            $user->handset = $phone;
+        }
+
+        $user->save();
+
+        return response()->json(['status' => 200, 'data'=> '']);
+    }
+
+    //用户风险等级list
+    public function qanswerList()
+    {
+        $data = [
+            ['value' => 0, 'label' => '未填写'],
+            ['value' => 1, 'label' => '北京'],
+            ['value' => 2, 'label' => '广州'],
+            ['value' => 3, 'label' => '纽约'],
+            ['value' => 4, 'label' => '伦敦'],
+            ['value' => 5, 'label' => '东京'],
+        ];
+
+        return response()->json(['status' => 200, 'data'=> $data]);
     }
 }

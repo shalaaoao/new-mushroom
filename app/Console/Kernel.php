@@ -2,6 +2,8 @@
 
 namespace App\Console;
 
+use App\Console\Commands\TestEventCommand;
+use App\Events\TestEvent;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -13,7 +15,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        TestEventCommand::class,
     ];
 
     /**

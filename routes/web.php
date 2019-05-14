@@ -37,7 +37,12 @@ Route::group(['prefix' => 'user'], function(){
 
         //个人中心
         Route::get('user_center', ['as' => 'user.user_center', 'uses' => 'UserController@userCenter']);
+
     });
 });
 
-Route::any('login', ['as' => 'login', 'uses' => 'IViewController@login']);
+Route::group(['prefix' => 'jiny'], function() {
+
+    //love circle
+    Route::get('20190520', ['as' => 'jiny.20190520', 'uses' => 'JinYController@act_20190520']);
+});
