@@ -1,79 +1,88 @@
 <!doctype html>
-<HEAD>
-    <META content="IE=10.000" http-equiv="X-UA-Compatible">
-    <META http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <TITLE>To Dear Miss Jin</TITLE>
-    <STYLE type="text/css">
+<head>
+    <meta content="IE=10.000" http-equiv="X-UA-Compatible">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>To Dear Miss Jin</title>
+    <style type="text/css">
         @font-face {
             font-family: digit;
         }
-    </STYLE>
-    <LINK href="/plugins/love_circle/css/default.css" rel="stylesheet" type="text/css">
-    <SCRIPT src="/plugins/love_circle/js/jquery.js" type="text/javascript"></SCRIPT>
-    <SCRIPT src="/plugins/love_circle/js/garden.js" type="text/javascript"></SCRIPT>
-    <SCRIPT src="/plugins/love_circle/js/functions.js" type="text/javascript"></SCRIPT>
+    </style>
+    <link href="/plugins/love_circle/css/default.css" rel="stylesheet" type="text/css">
+    <script src="/plugins/love_circle/js/jquery.js" type="text/javascript"></script>
+    <script src="/plugins/love_circle/js/garden.js" type="text/javascript"></script>
+    <script src="/plugins/love_circle/js/functions.js" type="text/javascript"></script>
 
-    <META name="GENERATOR" content="MSHTML 10.00.9200.17357">
-</HEAD>
-<BODY>
-<DIV id="ct" style="text-align: center; clear: both;display:none">
+    <meta name="GENERATOR" content="MSHTML 10.00.9200.17357">
+</head>
+<body>
+<div id="ct" style="text-align: center; clear: both;display:none">
 
-    <DIV id="mainDiv">
-        <DIV id="content">
-            <DIV id="code" style="margin-top:28px">
-                <SPAN class="comments">/**</SPAN><br class="space"><SPAN class="comments">*2019-05-04,</SPAN><BR>
-                <SPAN class="space"><SPAN class="comments">*2019-05-20.</SPAN><BR><SPAN class="space"><SPAN
-                                class="comments">*/</SPAN><BR>
-                            Hello~ My Name is <SPAN class="keyword">Mr</SPAN> Shalaaoao<BR><SPAN class="comments">//One day I added a WeChat friend </SPAN><BR>
-                            When I was thinking about how to start our chat.<BR><SPAN class="comments">//The girl say "Hello" first... This is really embarrassing for me</SPAN><BR><BR>
-                        Introduce myself: I'm your father's friend's nephew<BR><SPAN class="comments">//You can tell me Mr Aoao</SPAN><BR></SPAN></BR></SPAN>
-                My first impression of this girl is that she loves studying,<BR><SPAN class="comments">//Although that was during the exam period...</SPAN><BR>
-                When talking about life and ideals with her, <BR><SPAN class="comments">// I think this is a girl who has her own ideas and has been well educated</SPAN><BR>
-                Although she appears to be a fierce Leo,  <BR><SPAN class="comments">// there is humor and kawaii in her words,</SPAN><BR><SPAN
-                        class="comments">// which is different from all leos I know, </SPAN><BR><SPAN
-                        class="keyword"></SPAN><span>maybe because her birthday is close to cancer.</span><br/></br><SPAN
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code" style="margin-top:6px">
+                <span class="comments">/**</span><br class="space"><span class="comments">*2019-05-04,</span><br/>
+                <span class="space"><span class="comments">*2019-05-20.</span><br/><span class="space"><span
+                                class="comments">*/</span><br/>
+                            Hello~ My Name is <span class="keyword">Mr</span> Shalaaoao<br/><span class="comments">//One day the moon is black and wind is tall I was on my way home from work </span><br/>
+                           By some way I heard the news there is a queen(princess?) is falling from the sky .<br/><span
+                                class="comments">//I was so excited that I couldn't sleep, xin xin nian nian want to meet the queen.</span><br/><br/>
+                        Introduce myself: I'm your neighbor's colleagues' son<br/><span class="comments">//You can tell me Mr Aoao</span><br/></span></span>
+                My first impression of this girl is extraordinary temperament<br/>At first glance I knew she was a
+                cultural girl.<span class="comments">//And the grace that can't be hidden</span><br/>
+                I never believed that something was born, <br/><span class="comments">// The girl must have learned to play an instrument, drawing, or music? </span><br/>Is
+                my guess accurate :)<br/>
+                After getting to know each other, <br/><span
+                        class="comments">// I found that the girl is a plasterer,</span><br/><span
+                        class="comments">// although she's too low to render the wall(cake?), </span><br/><span
+                        class="keyword"></span><span>But this does not affect her in my mind is a good baker.</span><br/><br/><span
                         class="keyword">I love some one
-</SPAN>;<BR><SPAN class="keyword">who will quietly listen to me play the piano  </SPAN> , whether I play well or not<br/><SPAN
+</span>;<br/><span class="keyword">who will quietly listen to me play the piano  </span> , whether I play well or
+                not<br/><span
                         class="keyword">I love some one
-</SPAN>;<BR><SPAN class="keyword">who likes to arrange flowers from flower plus  </SPAN> , Maybe she prefers the immortal flower :)</br><SPAN
+</span>;<br/><span class="keyword">who likes to arrange flowers from flower plus  </span> , Maybe she prefers the
+                immortal flower :)<br/><span
                         class="keyword">I love some one
-                </SPAN>;<BR><SPAN class="keyword">who can take pictures, write calligraphy, play erhu and dance Latin.  </SPAN> So Literary youth?<BR/></br><SPAN
-                        class="placeholder">It is also scheduled to meet with you? The best things always happen by accident, that is life.<BR><SPAN
-                            class="comments">// My old aunt said that my piano might not grow in the future, I said I was too busy tanqin to tanqin :)<BR><br/>
-                                        Sincerely wishing you happy every day;<BR>
-                                    </SPAN>
-                                    <div style="text-align:right;">—Dear Mr Aoao</div>
-                                </SPAN>
+                </span>;<BR><span
+                        class="keyword">who can take pictures, write calligraphy, play erhu and dance Latin.  </span> So
+                Literary youth?<br/><br/><span
+                        class="placeholder">It is also scheduled to meet with you? The best things always happen by accident, that is life.<br/><span
+                            class="comments">// My old aunt said that my piano might not grow in the future, I said I was too busy tanqin to tanqin :)<br/><br/></span>
+                </span>
 
-                <BR><SPAN class="placeholder"><SPAN
-                            class="comments">//有些人对吧，虽然被撩的话看的多了，但我就不相信了，她还见过这种形式的撩:)</SPAN>
-                                <SPAN
-                                        class="comments">// 虽然我英语不好，小情书写的也不好，但我会写代码呀！<BR>
-                            </SPAN>
-                        </SPAN>
-                </SPAN>
-                </SPAN>
-            </DIV>
-            <DIV id="loveHeart">
-                <CANVAS id="garden"></CANVAS>
-                <DIV id="words">
-                    <DIV id="messages">这是我们一起走过的岁月~
-                        <DIV id="elapseClock"></DIV>
-                    </DIV>
-                    <DIV id="loveu">
-                        <div style="margin-right:35px;margin-bottom:15px;">愿你一生努力，一生被爱。</div>
-                        <div style="margin-bottom:15px;">想要的都拥有，得不到的都释怀。</div>
-                        <DIV class="signature">- 一直都在的 陈家傲</DIV>
-                    </DIV>
-                </DIV>
-            </DIV>
-        </DIV>
-    </DIV>
-</DIV>
+                <br/><span class="placeholder"><span class="comments">//Would you like to try to be my gf?</span>
+                    <span class="keyword">If you want to be a queen, I will to be xiao ao zi.<br/></span>
+                                <span class="comments">//If you want to be a princess, I will to be your prince forever~</span>
+                        </span> <br/><br/>
 
-<SCRIPT type="text/javascript">
+                <span class="keyword">If you want to think about it more time, I will keep waiting the answer for you in the future day. <br/></span>
 
-    alert_line();
+                <span class="comments">//If you want to say 『Yes』......<br/> 就现在，我在楼下等你~, may be I take something you love :)</span>
+                <br/>
+
+                Sincerely wishing you happy every day;<br/>
+                <div style="text-align:right;">—Dear Mr Aoao</div>
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">这是我们一起走过的岁月~
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        <div style="margin-right:65px;margin-bottom:12px;">烟火等待着黑夜</div>
+                        <div style="margin-right:58px;margin-bottom:12px;">风筝依偎着线</div>
+                        <div class="signature"> <<爱到最美是陪伴>></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    // alert_line();
 
     var styleElement = document.getElementById('ct');
     styleElement.style.display = "block";
@@ -99,7 +108,7 @@
     } else {
         setTimeout(function () {
             startHeartAnimation();
-        }, 80000);
+        }, 0);
 
         timeElapse(together);
         setInterval(function () {
@@ -111,7 +120,7 @@
     }
 
     //初始弹框
-    function alert_line(){
+    function alert_line() {
         alert('Hi Miss Jin');
         alert('~~~');
         alert('Do you know...');
@@ -129,13 +138,13 @@
         alert('Then...');
         alert('It is my Show Time~')
     }
-</SCRIPT>
+</script>
 <!--<div>-->
 <!--<embed autostart="true" loop="-1" controls="ControlPanel" width="300" height="70" src="";>-->
 <!---->
 <!--</div>-->
 
-<audio src="/plugins/love_circle/music/River.mp3" autoplay preload="auto" style="width:200px;height:40px;position:absolute;top:1px" controls="controls"></audio>
+<audio src="/plugins/love_circle/music/River.mp3" autoplay preload="auto"
+       style="width:200px;height:40px;position:absolute;top:1px" controls="controls"></audio>
 
-</BODY>
-</HTML>
+</body>
