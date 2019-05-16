@@ -79,7 +79,7 @@
 
 <script type="text/javascript">
 
-    // alert_line();
+    //alert_line();
 
     var styleElement = document.getElementById('ct');
     styleElement.style.display = "block";
