@@ -24,33 +24,30 @@
                 <span class="comments">/**</span><br class="space"><span class="comments">*2019-05-04,</span><br/>
                 <span class="space"><span class="comments">*2019-05-20.</span><br/><span class="space"><span
                                 class="comments">*/</span><br/>
-                            Hello~ My Name is <span class="keyword">Mr</span> Shalaaoao<br/><span class="comments">//One day the moon is black and wind is tall I was on my way home from work </span><br/>
-                           By some way I heard the news there is a queen(princess?) is falling from the sky .<br/><span
-                                class="comments">//I was so excited that I couldn't sleep, xin xin nian nian want to meet the queen.</span><br/><br/>
-                        Introduce myself: I'm your neighbor's colleagues' son<br/><span class="comments">//You can tell me Mr Aoao</span><br/></span></span>
-                My first impression of this girl is extraordinary temperament<br/>At first glance I knew she was a
-                cultural girl.<span class="comments">//And the grace that can't be hidden</span><br/>
-                I never believed that something was born, <br/><span class="comments">// The girl must have learned to play an instrument, drawing, or music? </span><br/>Is
-                my guess accurate :)<br/>
-                After getting to know each other, <br/><span
-                        class="comments">// I found that the girl is a plasterer,</span><br/><span
-                        class="comments">// although she's too low to render the wall(cake?), </span><br/><span
-                        class="keyword"></span><span>But this does not affect her in my mind is a good baker.</span><br/><br/><span
+                            Hello~ My Name is <span class="keyword">Mr</span> Shalaaoao<br/><br/><span class="comments">//One day the moon is black and wind is tall<br/> I was on my way home from work </span><br/>
+                           By some way I heard the news there is a queen(princess?) <br/>is falling from the sky .<br/><span
+                                class="comments">//I was so excited that I couldn't sleep,<br/> xin xin nian nian want to meet the queen.</span><br/><br/>
+                        Introduce myself: I'm your neighbor's colleagues' son<br/><span class="comments">//You can tell me Mr Aoao</span><br/><br/></span></span>
+                My first impression of this girl is extraordinary temperament.<br/>At first glance I knew she was a
+                cultural girl,<span class="comments">//and the grace that can't be hidden</span><br/>
+                I never believed that something was born, <br/><span class="comments">// This must be a well-read and accomplished girl~</span><br/>Is my guess accurate :)<br/>
+                {{--After getting to know each other, <br/><span--}}
+                        {{--class="comments">// I found that the girl is a plasterer,</span><br/><span--}}
+                        {{--class="comments">// although she's too low to render the wall(cake?), </span><br/><span--}}
+                        {{--class="keyword"></span><span>But this does not affect her in my mind is a good baker.</span>--}}
+
+                <br/><br/><span
                         class="keyword">I love some one
-</span>;<br/><span class="keyword">who will quietly listen to me play the piano  </span> , whether I play well or
-                not<br/><span
+</span>;<br/><span class="keyword">who has a changeable personality, sometimes queen and sometimes princess<br/><span
                         class="keyword">I love some one
-</span>;<br/><span class="keyword">who likes to arrange flowers from flower plus  </span> , Maybe she prefers the
-                immortal flower :)<br/><span
+</span>;<br/><span class="keyword">who smiles so sweet that looks like an angle in the cloud </span><br/><span
                         class="keyword">I love some one
-                </span>;<BR><span
-                        class="keyword">who can take pictures, write calligraphy, play erhu and dance Latin.  </span> So
-                Literary youth?<br/><br/><span
-                        class="placeholder">It is also scheduled to meet with you? The best things always happen by accident, that is life.<br/><span
-                            class="comments">// My old aunt said that my piano might not grow in the future, I said I was too busy tanqin to tanqin :)<br/><br/></span>
+                </span>;<br/><span
+                        class="keyword">may who has been happy all her life like 『3A87』 .  </span> <br/><br/><span
+                        class="placeholder">It is also scheduled to meet with you? The best things always happen by accident, that is life.<br/><BR/>
                 </span>
 
-                <br/><span class="placeholder"><span class="comments">//Would you like to try to be my gf?</span>
+                <br/><span class="placeholder"><span class="comments">//At last...<br/> Would you like to try to be my GF?<br/></span>
                     <span class="keyword">If you want to be a queen, I will to be xiao ao zi.<br/></span>
                                 <span class="comments">//If you want to be a princess, I will to be your prince forever~</span>
                         </span> <br/><br/>
@@ -66,13 +63,13 @@
             <div id="loveHeart">
                 <canvas id="garden"></canvas>
                 <div id="words">
-                    <div id="messages">这是我们一起走过的岁月~
+                    <div id="messages">This is the years we've spent together~
                         <div id="elapseClock"></div>
                     </div>
                     <div id="loveu">
-                        <div style="margin-right:65px;margin-bottom:12px;">烟火等待着黑夜</div>
-                        <div style="margin-right:58px;margin-bottom:12px;">风筝依偎着线</div>
-                        <div class="signature"> <<爱到最美是陪伴>></div>
+                        <div style="margin-right:22px;margin-bottom:12px;">是否爱上一个人不问明天过后，</div>
+                        <div style="margin-right:6px;margin-bottom:12px;">山明和水秀不比你有看头。</div>
+                        <div class="signature"> --To 3A87的幸福</div>
                     </div>
                 </div>
             </div>
@@ -108,7 +105,7 @@
     } else {
         setTimeout(function () {
             startHeartAnimation();
-        }, 0);
+        }, 90000);
 
         timeElapse(together);
         setInterval(function () {

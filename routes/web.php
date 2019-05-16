@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//首页
+Route::get('/', ['as' => '/', 'uses' => 'IndexController@index']);
 
     Route::any('test', ['as' => 'test', 'uses' => 'TestController@test']);
     Route::any('test2', ['as' => 'test2', 'uses' => 'TestController@test2']);
