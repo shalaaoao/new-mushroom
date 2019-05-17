@@ -31,10 +31,6 @@
                 My first impression of this girl is extraordinary temperament.<br/>At first glance I knew she was a
                 cultural girl,<span class="comments">//and the grace that can't be hidden</span><br/>
                 I never believed that something was born, <br/><span class="comments">// This must be a well-read and accomplished girl~</span><br/>Is my guess accurate :)<br/>
-                {{--After getting to know each other, <br/><span--}}
-                        {{--class="comments">// I found that the girl is a plasterer,</span><br/><span--}}
-                        {{--class="comments">// although she's too low to render the wall(cake?), </span><br/><span--}}
-                        {{--class="keyword"></span><span>But this does not affect her in my mind is a good baker.</span>--}}
 
                 <br/><br/><span
                         class="keyword">I love some one
@@ -50,7 +46,7 @@
                 <br/><span class="placeholder"><span class="comments">//At last...<br/>
                             ........................
                             <br/> Would you like to ...<br/> try to be my GF?<br/><br/></span>
-                    <span class="keyword">If you want to be a queen, I will to be xiao ao zi.<br/></span>
+                    <span class="keyword">If you want to be a queen, I will to be your xiao ao zi, <br/>and for you a thousand times over~<br/></span>
                                 <span class="comments">//If you want to be a princess, I will to be your prince forever~</span>
                         </span> <br/><br/>
 
