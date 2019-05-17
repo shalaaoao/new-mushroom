@@ -14,8 +14,8 @@ class IndexController extends Controller
     // index
     public function index()
     {
-        $url = request()->getUri();
-        if ($url == 'http://julyjiny.shalaaoao.com') {
+        $url  = request()->getHost();
+        if ($url == 'julyjiny.shalaaoao.com') {
             return redirect(route('jiny.20190520'));
         }
 

@@ -24,7 +24,7 @@
                 <span class="comments">/**</span><br class="space"><span class="comments">*2019-05-04,</span><br/>
                 <span class="space"><span class="comments">*2019-05-20.</span><br/><span class="space"><span
                                 class="comments">*/</span><br/>
-                            Hello~ My Name is <span class="keyword">Mr</span> Shalaaoao<br/><br/><span class="comments">//One day the moon is black and wind is tall<br/> I was on my way home from work </span><br/>
+                            Hello~ My Name is <span class="keyword">Mr</span> Aoao<br/><br/><span class="comments">//One day the moon is black and wind is tall<br/> I was on my way home from work </span><br/>
                            By some way I heard the news there is a queen(princess?) <br/>is falling from the sky .<br/><span
                                 class="comments">//I was so excited that I couldn't sleep,<br/> xin xin nian nian want to meet the queen.</span><br/><br/>
                         Introduce myself: I'm your neighbor's colleagues' son<br/><span class="comments">//You can tell me Mr Aoao</span><br/><br/></span></span>
@@ -47,7 +47,9 @@
                         class="placeholder">It is also scheduled to meet with you? The best things always happen by accident, that is life.<br/><BR/>
                 </span>
 
-                <br/><span class="placeholder"><span class="comments">//At last...<br/> Would you like to try to be my GF?<br/></span>
+                <br/><span class="placeholder"><span class="comments">//At last...<br/>
+                            ........................
+                            <br/> Would you like to ...<br/> try to be my GF?<br/><br/></span>
                     <span class="keyword">If you want to be a queen, I will to be xiao ao zi.<br/></span>
                                 <span class="comments">//If you want to be a princess, I will to be your prince forever~</span>
                         </span> <br/><br/>
@@ -55,9 +57,7 @@
                 <span class="keyword">If you want to think about it more time, I will keep waiting the answer for you in the future day. <br/></span>
 
                 <span class="comments">//If you want to say 『Yes』......<br/> 就现在，我在楼下等你~, may be I take something you love :)</span>
-                <br/>
-
-                Sincerely wishing you happy every day;<br/>
+                <br/><br/>
                 <div style="text-align:right;">—Dear Mr Aoao</div>
             </div>
             <div id="loveHeart">
@@ -79,7 +79,7 @@
 
 <script type="text/javascript">
 
-    //alert_line();
+    alert_line();
 
     var styleElement = document.getElementById('ct');
     styleElement.style.display = "block";
