@@ -10,38 +10,38 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+$router->any('test', ['as' => 'test', 'uses' => 'TestController@test']);
+$router->any('test2', ['as' => 'test2', 'uses' => 'TestController@test2']);
 
-//首页
-Route::get('/', ['as' => '/', 'uses' => 'IndexController@index']);
+$router->group(['middleware' => 'user_access_log'], function ($router) {
 
-    Route::any('test', ['as' => 'test', 'uses' => 'TestController@test']);
-    Route::any('test2', ['as' => 'test2', 'uses' => 'TestController@test2']);
+    //首页
+    $router->get('/', ['as' => '/', 'uses' => 'IndexController@index']);
 
-Route::group(['prefix' => 'user'], function(){
+    $router->group(['prefix' => 'user'], function ($router) {
 
-    //登录
-    Route::get('login', ['as' => 'user.login', 'uses' => 'UserController@login']);
+        //登录
+        $router->get('login', ['as' => 'user.login', 'uses' => 'UserController@login']);
 
-    //处理 - 登录
-    Route::post('do_login', ['as' => 'user.do_login', 'uses' => 'UserController@doLogin']);
+        //处理 - 登录
+        $router->post('do_login', ['as' => 'user.do_login', 'uses' => 'UserController@doLogin']);
 
-    //注册
-    Route::get('register', ['as' => 'user.register', 'uses' => 'UserController@register']);
+        //注册
+        $router->get('register', ['as' => 'user.register', 'uses' => 'UserController@register']);
 
-    //处理 - 注册
-    Route::post('do_register', ['as' => 'user.do_register', 'uses' => 'UserController@doRegister']);
+        //处理 - 注册
+        $router->post('do_register', ['as' => 'user.do_register', 'uses' => 'UserController@doRegister']);
 
+        $router->group(['middleware' => ['user_login']], function ($router) {
 
-    Route::group(['middleware' => ['user_login']], function() {
-
-        //个人中心
-        Route::get('user_center', ['as' => 'user.user_center', 'uses' => 'UserController@userCenter']);
-
+            //个人中心
+            $router->get('user_center', ['as' => 'user.user_center', 'uses' => 'UserController@userCenter']);
+        });
     });
-});
 
-Route::group(['prefix' => 'jiny'], function() {
+    $router->group(['prefix' => 'jiny'], function ($router) {
 
-    //love circle
-    Route::get('20190520', ['as' => 'jiny.20190520', 'uses' => 'JinYController@act_20190520']);
+        //love circle
+        $router->get('20190520', ['as' => 'jiny.20190520', 'uses' => 'JinYController@act_20190520']);
+    });
 });

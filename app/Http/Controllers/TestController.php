@@ -13,27 +13,7 @@ class TestController extends Controller
 {
     public function test()
     {
-        $a = $this->largestNumber([1, 2, 3, 4, 5, 10, 11, 12]);
-        dd($a);
-//        $arr = [1,2,3,4,5];
-//        rsort($arr);
-
-        die;
-        $obj = new LRUCacheBest(2);
-        $obj->put(1, 1);
-        $obj->put(2, 2);
-        echo $obj->get(1) . PHP_EOL;
-        $obj->put(3, 3);
-        echo $obj->get(2) . PHP_EOL;
-
-        $obj->put(4, 4);
-
-
-        echo $obj->get(1) . PHP_EOL;
-
-
-        echo $obj->get(3) . PHP_EOL;
-        echo $obj->get(4) . PHP_EOL;
+        echo request()->getClientIp();
     }
 
     /**

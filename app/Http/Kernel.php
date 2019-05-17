@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\CrossHttp;
 use App\Http\Middleware\FilterAdminToken;
+use App\Http\Middleware\UserAccessLog;
 use App\Http\Middleware\UserLogin;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -57,14 +58,15 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth'          => \Illuminate\Auth\Middleware\Authenticate::class,
-        'auth.basic'    => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'bindings'      => \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
-        'can'           => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest'         => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'throttle'      => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'user_login'    => UserLogin::class,
-        'admin_token'   => FilterAdminToken::class,
+        'auth'            => \Illuminate\Auth\Middleware\Authenticate::class,
+        'auth.basic'      => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'bindings'        => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        'cache.headers'   => \Illuminate\Http\Middleware\SetCacheHeaders::class,
+        'can'             => \Illuminate\Auth\Middleware\Authorize::class,
+        'guest'           => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'throttle'        => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'user_login'      => UserLogin::class,
+        'admin_token'     => FilterAdminToken::class,
+        'user_access_log' => UserAccessLog::class,
     ];
 }

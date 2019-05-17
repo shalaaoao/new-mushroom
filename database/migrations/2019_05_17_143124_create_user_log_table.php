@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class StrictTable extends Migration
+class CreateUserLogTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class StrictTable extends Migration
      */
     public function up()
     {
-        Schema::create('strict_test', function (Blueprint $table) {
+        Schema::create('user_log', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->index();
-            $table->string('desc');
+            $table->string('ip');
+            $table->string('url');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -29,6 +29,6 @@ class StrictTable extends Migration
      */
     public function down()
     {
-        Schema::drop('strict_test');
+        Schema::dropIfExists('user_log');
     }
 }

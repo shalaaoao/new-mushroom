@@ -14,6 +14,9 @@
     <script src="{{asset("plugins/login_boot/js/jquery-1.11.1.min.js")}}"></script>
     <script src="{{asset("js/common.js")}}"></script>
 
+    <!--百度统计-->
+    <script src="/js/baidu_statistics.js"></script>
+
 </head>
 @yield('body_before')
 <body>

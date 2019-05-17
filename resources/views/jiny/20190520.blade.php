@@ -14,6 +14,10 @@
     <script src="/plugins/love_circle/js/functions.js" type="text/javascript"></script>
 
     <meta name="GENERATOR" content="MSHTML 10.00.9200.17357">
+
+    <!--百度统计-->
+    <script src="/js/baidu_statistics.js"></script>
+
 </head>
 <body>
 <div id="ct" style="text-align: center; clear: both;display:none">
