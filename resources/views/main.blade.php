@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <meta name="description" content="小蘑菇工作室" />
-    <meta name="keywords" content="小蘑菇" />
-    <title>@yield('title','小蘑菇工作室')</title>
+    <meta name="description" content="Julyaoao的小窝" />
+    <meta name="keywords" content="Julyaoao的小窝" />
+    <title>@yield('title','Julyaoao的小窝')</title>
 
     <link rel="stylesheet" href="{{asset('css/common.css')}}">
 

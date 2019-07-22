@@ -2,115 +2,94 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\LRUCache;
-use App\Model\LRUCacheBest;
-use App\Model\User;
+
+use App\Model\CircleGetLog;
+use App\Model\CirclePrize;
+use App\Model\TurnCardBetOrder;
+use App\Model\TurnCardGetLog;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Redis;
 
 class TestController extends Controller
 {
     public function test()
     {
-        echo request()->getClientIp();
-    }
 
-    /**
-     * @param Integer[] $nums
-     * @return String
-     */
-    function largestNumber($nums)
-    {
-        $ct = count($nums);
-        for ($i = 0; $i < $ct - 1; $i++) {
+        dd(123);
+        $s   = 0;
+        $bbt = 0;
+        $user_n = [];
+        $error_num = 0;
 
-            for ($j = 0; $j < $ct - $i - 1; $j++) {
+        $prize_id_list = CircleGetLog::query()->where('id','>',1)->select('id', 'prize_id', 'user_id', 'created_at')->get()->toArray();
+        foreach ($prize_id_list as $v) {
+            $get_log_id   = $v['id'];
+            $prize_id     = $v['prize_id'];
+            $user_id      = $v['user_id'];
+            $created_time = strtotime($v['created_at']);
+            if (!$user_id) {
+                dd($v);
+            }
 
-                if (ord($nums[$j]) < ord($nums[$j + 1])) {
+            $low_created_time = $created_time - 2;
+            $low_created_at   = date('Y-m-d H:i:s', $low_created_time);
 
-                    $tmp          = $nums[$j];
-                    $nums[$j]     = $nums[$j + 1];
-                    $nums[$j + 1] = $tmp;
-                }
+            $high_created_time = $created_time + 2;
+            $high_created_at   = date('Y-m-d H:i:s', $high_created_time);
+
+            // 判断是不是垃圾数据
+            $last_get_log = CircleGetLog::where(['user_id' => $user_id])->where('id', '<', $get_log_id)->select('created_at')->orderBy('id', 'desc')->first();
+            if (!$last_get_log) {
+                continue;
+            }
+
+            $last_created_time = strtotime($last_get_log->created_at);
+            if ($created_time - $last_created_time >= 2) {
+                continue;
+            }
+
+            //垃圾数据
+            $error_num++;
+
+            $prize = CirclePrize::where('id', $prize_id)->select('type', 'cnst')->first();
+            $type  = $prize['type'];
+            $cnst  = $prize['cnst'];
+
+            if ($type == 1) {
+                $bbt += 1;
+                continue;
+            }
+
+
+            $turn_log = TurnCardGetLog::query()->where(['user_id' => $user_id])->whereBetween('created_at',
+                [$low_created_at, $high_created_at])->select('order_id')->first();
+            if (!$turn_log) {
+                var_dump('error_turn_log_' . $user_id . '...' . $get_log_id);
+                var_dump($v);
+
+                die;
+            }
+            $bet_id = $turn_log->order_id;
+
+            $bet = TurnCardBetOrder::where('id', $bet_id)->select('gouliang_num')->first();
+            if (!$bet) {
+                dd('error_bet_id...' . $bet_id);
+            }
+
+            $send_gouliang = $bet->gouliang_num * $cnst;
+            $s             += $send_gouliang;
+
+            if (isset($user_n[$user_id])) {
+                $user_n[$user_id] += $send_gouliang;
+            } else {
+                $user_n[$user_id] = $send_gouliang;
             }
         }
 
-        return implode($nums);
+        var_dump('bbt:'.$bbt);
+        var_dump('狗粮总数:'.$s);
+        var_dump('用户:'.count($user_n));
+        var_dump('垃圾条数:'.$error_num);
+        var_export($user_n);
     }
-
-    function st($arr, $num)
-    {
-        $ct_arr = count($arr);
-
-        if ($ct_arr == 0) {
-            return [$num];
-        }
-
-        if ($ct_arr == 1) {
-            if ($ct_arr[0] < $num) {
-                $tmp       = $ct_arr[0];
-                $ct_arr[0] = $num;
-                $ct_arr[1] = $tmp;
-            }
-        }
-
-        for ($i = 0; $i < $ct_arr - 1; $i++) {
-            if ($arr[$i] > $num && $arr[$i + 1] < $num) {
-                $tmp            = $ct_arr[$i];
-                $ct_arr[$i]     = $num;
-                $ct_arr[$i + 1] = $tmp;
-            }
-        }
-    }
-
-    public static function http_post_data($url, $data, $time_out = 1)
-    {
-        Log::info('请求url======' . $url);
-
-        if (is_array($data)) {
-            Log::info('请求参数=====' . json_encode($data));
-        } else {
-            Log::info('请求参数=====' . $data);
-        }
-
-        $ch = curl_init();
-//        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_URL, $url);
-//        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-        curl_setopt($ch, CURLOPT_SSLVERSION, 1);
-
-        //若超时时间=1，设置毫秒级超时
-        if ($time_out == 1) {
-            curl_setopt($ch, CURLOPT_NOSIGNAL, true);  //支持毫秒级别
-            curl_setopt($ch, CURLOPT_TIMEOUT_MS, 1);  //1000毫秒超时，超时间过短会导致，请求失败
-        } else {
-            curl_setopt($ch, CURLOPT_TIMEOUT, $time_out);
-        }
-
-        ob_start();
-        curl_exec($ch);
-        $result = ob_get_contents();
-
-        if ($time_out != 1) {
-            Log::info('http返回码=====' . curl_getinfo($ch, CURLINFO_HTTP_CODE));
-            Log::info('返回结果===' . $result);
-        } else {
-            Log::info('不需要返回值的请求');
-        }
-
-        if (curl_errno($ch)) {
-            Log::info('Curl error: ' . curl_error($ch));
-        }
-
-        ob_end_clean();
-        curl_close($ch);
-
-        return $result;
-    }
-
-
 }
-

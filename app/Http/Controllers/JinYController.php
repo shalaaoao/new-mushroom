@@ -16,4 +16,24 @@ class JinYController extends Controller
     {
         return view('jiny.20190520');
     }
+
+    // birthday circle
+    public function act_20190727()
+    {
+        $plugins_root = '/plugins/birthday_circle/';
+        $img_src      = $plugins_root . 'img/';
+        $css_src      = $plugins_root . 'css/';
+        $js_src       = $plugins_root . 'js/';
+        $music_src    = $plugins_root . 'music/';
+
+        $data = [
+            'img_src'   => $img_src,
+            'css_src'   => $css_src,
+            'js_src'    => $js_src,
+            'music_src' => $music_src,
+        ];
+
+        return view('jiny.20190727', $data);
+    }
+
 }

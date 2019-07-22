@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +11,6 @@
 */
 $router->any('test', ['as' => 'test', 'uses' => 'TestController@test']);
 $router->any('test2', ['as' => 'test2', 'uses' => 'TestController@test2']);
-
 $router->group(['middleware' => 'user_access_log'], function ($router) {
 
     //首页
@@ -43,5 +41,8 @@ $router->group(['middleware' => 'user_access_log'], function ($router) {
 
         //love circle
         $router->get('20190520', ['as' => 'jiny.20190520', 'uses' => 'JinYController@act_20190520']);
+
+        //notes
+        $router->get('20190727', ['as' => 'jiny.20190609', 'uses' => 'JinYController@act_20190727']);
     });
 });

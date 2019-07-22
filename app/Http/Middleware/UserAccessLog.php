@@ -18,9 +18,8 @@ class UserAccessLog
     public function handle($request, Closure $next)
     {
         try {
-
             $data = [
-                'user_id' => session()->get('user')['id'] ?? 0,
+                'user_id' => session()->get('user_info')['id'] ?? 0,
                 'ip'      => request()->getClientIp(),
                 'url'     => request()->getRequestUri(),
             ];
