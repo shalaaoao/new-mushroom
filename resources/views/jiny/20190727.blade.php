@@ -261,9 +261,9 @@
             <div id="/section-9/page-3" class="ft-page page-54 center-img" data-id="page-3" style="background: #d3d2d0 url({{$img_src}}319280_bg.jpg) repeat">
                 <div class="center-img" style="background-image: url({{$img_src}}319280.jpg);">I love you</div>
             </div>
-            <div id="/section-9/page-4" class="ft-page page-55 right-img" data-id="page-4">
+            <div id="/section-9/page-4" class="ft-page page-55 left-img" data-id="page-4">
                 <img src='{{$img_src}}bg_baobao.jpg' />
-                <p class="text" style="color:#ffffff;margin-left:100px;">
+                <p class="text" style="color:#ffffff;left:0;right:0;text-align:left;margin-left:100px;">
                     你以为今天惊喜到此为止了吗?<br />
                     往后的日子<br />
                     慢慢地会告诉你<br />
@@ -289,7 +289,7 @@
         </div>
     </div>
 
-    <audio src="{{$music_src}}zhuiguangzhe.mp3" autoplay preload="auto"
+    <audio src="{{$music_src}}thisislove.mp3" autoplay preload="auto"
            style="width:200px;height:40px;position:absolute;top:1px" controls="controls"></audio>
 
     <script src="{{$js_src}}jquery.3.4.1.js"></script>
