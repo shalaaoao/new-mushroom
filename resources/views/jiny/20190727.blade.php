@@ -267,12 +267,10 @@
                     你以为今天惊喜到此为止了吗?<br />
                     往后的日子<br />
                     慢慢地会告诉你<br />
-                    <br/>
                     ...
                     <br/>
-                    <br/>
                     遇上对的人...<br/>
-                    每天都是情人节~<br />
+                    每天都是儿童节~<br />
                     <br/>
 
                     『<br />
@@ -281,8 +279,10 @@
                     &nbsp;&nbsp;』<br/>
                     <br/>
 
-                    Please tell me your answer~<br/>
-                    <br/>
+                    Please tell me your answer~<br/><br/>
+                    —— Mr Julyaoao <br/>
+                    2019.07.27
+                    <br/><br/>
                     <span> -- 按“Esc"键有惊喜</span>
                 </p>
             </div>
